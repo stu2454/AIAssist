@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "Stuart Smith PhD MSc"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  # avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Interested in all things tech and accessibility"
   location         : "Bellingen"
   email            : "stuart.smith@ndis.gov.au"

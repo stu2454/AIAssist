@@ -5,7 +5,16 @@
   flex-wrap: nowrap;
   gap: 20px; /* Space between sidebar and content */
 }
+.sidebar-photo {
+  text-align: center; /* Center the photo */
+  margin-bottom: 20px; /* Add spacing below the photo */
+}
 
+.sidebar-photo .author-photo {
+  max-width: 100px; /* Set a maximum width for the photo */
+  border-radius: 50%; /* Make the photo circular */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
 /* Sidebar Styling */
 .sidebar {
   flex: 1; /* Sidebar takes less space */
@@ -16,17 +25,6 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar-photo {
-  text-align: center; /* Center the photo */
-  margin-bottom: 20px; /* Add spacing below the photo */
-}
-
-.sidebar-photo .author-photo {
-  max-width: 100px; /* Set a maximum width for the photo */
-  border-radius: 50%; /* Make the photo circular */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
 

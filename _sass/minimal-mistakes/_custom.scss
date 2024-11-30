@@ -18,6 +18,18 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.sidebar-photo {
+  text-align: center; /* Center the photo */
+  margin-bottom: 20px; /* Add spacing below the photo */
+}
+
+.sidebar-photo .author-photo {
+  max-width: 100px; /* Set a maximum width for the photo */
+  border-radius: 50%; /* Make the photo circular */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+
 /* Post Content Styling */
 .post-content {
   flex: 3; /* Main content takes more space */

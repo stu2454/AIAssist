@@ -1,6 +1,8 @@
-{% if page.author_profile or layout.author_profile or page.sidebar %}
-  <div class="sidebar sticky">
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+<div class="sidebar sticky">
+  {% if page.author_profile or layout.author_profile %}
+    {% include author-profile.html %}
+  {% endif %}
+
   {% if page.sidebar %}
     {% for s in page.sidebar %}
       {% if s.image %}
@@ -11,9 +13,26 @@
       {% if s.text %}{{ s.text | markdownify }}{% endif %}
       {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
     {% endfor %}
-    {% if page.sidebar.nav %}
-      {% include nav_list nav=page.sidebar.nav %}
-    {% endif %}
+  {% else %}
+    <!-- Default Sidebar Content -->
+    <h3>About Me</h3>
+    <p>Stuart Smith PhD MSc<br>Interested in all things tech and accessibility</p>
+    
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:stuart.smith@ndis.gov.au">stuart.smith@ndis.gov.au</a></p>
+    <p>Location: Bellingen</p>
+    
+    <h3>Recent Posts</h3>
+    <ul>
+      {% for post in site.posts limit: 5 %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
   {% endif %}
-  </div>
-{% endif %}
+</div>
+
+<div class="sidebar-photo">
+  <img src="{{ "/assets/images/mugshot.jpeg" | relative_url }}" alt="Stuart Smith" class="author-photo">
+</div>
+
+

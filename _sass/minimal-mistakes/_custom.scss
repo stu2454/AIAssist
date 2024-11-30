@@ -1,11 +1,43 @@
-/* Add left margin to posts for better readability */
-.post {
-  margin-left: 60px; /* Adjust value as needed */
-  padding-left: 60px; /* Optional: Adds internal spacing */
+
+/* Flex container for post and sidebar */
+.post-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px; /* Space between sidebar and content */
 }
 
-.content {
-  margin-left: 60px;
-  padding-left: 60px;
+/* Sidebar Styling */
+.sidebar {
+  flex: 1; /* Sidebar takes less space */
+  max-width: 250px;
+  position: sticky;
+  top: 20px; /* Adjust based on your header */
+  background-color: #f9f9f9; /* Optional: Light background for sidebar */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Post Content Styling */
+.post-content {
+  flex: 3; /* Main content takes more space */
+  padding: 20px;
+}
+
+/* Post Navigation Links */
+.post-navigation {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.post-navigation a {
+  color: #6b2976; /* Example: NDIS purple */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post-navigation a:hover {
+  text-decoration: underline;
+}
+
 

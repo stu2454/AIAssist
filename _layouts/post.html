@@ -1,0 +1,52 @@
+---
+layout: default
+sidebar:
+  nav: "main"
+---
+
+<div class="post-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    {% include sidebar.html %}
+  </aside>
+
+  <!-- Main Post Content -->
+  <main class="post-content">
+    <article class="post">
+      <!-- Post Header -->
+      <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.subtitle %}
+          <p class="post-subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+        <p class="post-meta">
+          {{ page.date | date: "%B %d, %Y" }}
+          {% if page.categories.size > 0 %}
+            | Categories: {{ page.categories | join: ", " }}
+          {% endif %}
+          {% if page.tags.size > 0 %}
+            | Tags: {{ page.tags | join: ", " }}
+          {% endif %}
+        </p>
+      </header>
+
+      <!-- Post Content -->
+      <div class="post-body">
+        {{ content }}
+      </div>
+
+      <!-- Post Footer -->
+      <footer class="post-footer">
+        <nav class="post-navigation">
+          {% if page.previous %}
+            <a href="{{ page.previous.url }}" class="prev-post">← {{ page.previous.title }}</a>
+          {% endif %}
+          {% if page.next %}
+            <a href="{{ page.next.url }}" class="next-post">{{ page.next.title }} →</a>
+          {% endif %}
+        </nav>
+      </footer>
+    </article>
+  </main>
+</div>
+

@@ -110,3 +110,8 @@ navigation:
   - title: "About"
     url: "/about/"
 
+collections:
+  posts:
+    output: true
+    permalink: /:title/
+

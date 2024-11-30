@@ -1,6 +1,27 @@
-# Defaults
+title: "AI & Assistive Technology"
+email: "stuart.smith@ndis.gov.au"
+description: "Exploring the intersection of AI and assistive technology."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://stu2454.github.io" # the base hostname & protocol for your site
+lang: "en-AU"
+
+# Social media and web presence links
+author:
+  name: "Stuart Smith PhD MSc"
+  # avatar: "/assets/images/bio-photo.jpg"
+  bio: "Interested in all things tech and accessibility"
+  location: "Bellingen"
+  email: "stuart.smith@ndis.gov.au"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:stuart.smith@ndis.gov.au"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/stu2454"
+
+# Defaults for pages, posts, and collections
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -8,7 +29,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
       sidebar:
@@ -21,22 +42,73 @@ defaults:
         - title: "Recent Posts"
           nav: "recent_posts"
 
-#navigation
-navigation:
-  - main
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
 
-# Sidebar for navigation
-author:
-  name             : "Stuart Smith PhD MSc"
-  # avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Interested in all things tech and accessibility"
-  location         : "Bellingen"
-  email            : "stuart.smith@ndis.gov.au"
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:stuart.smith@ndis.gov.au"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/stu2454"
+# Theme and plugins
+theme: "minimal-mistakes-jekyll"
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Pagination settings
+paginate: 5
+paginate_path: "/page:num/"
+
+# Navigation menu
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Contact"
+    url: "/contact/"
+  - title: "GitHub"
+    url: "https://github.com/stu2454"
+
+# Sidebar and widgets
+sidebar:
+  nav: "main"
+
+# Taxonomies
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+categories:
+  - AI
+  - Assistive Technology
+  - Accessibility
+tags:
+  - AI
+  - Disability
+  - NDIS
+  - Accessibility
+  - Technology
+
+# SEO and meta settings
+google_analytics: "UA-XXXXXX-X" # Replace with your Google Analytics ID
+sitemap:
+  changefreq: "weekly"
+  priority: 0.5
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# Other settings
+future: true
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+  auto_ids: true
+  toc_levels: 1..6
+  hard_wrap: false
 
